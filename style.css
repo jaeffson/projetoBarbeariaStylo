@@ -82,7 +82,7 @@ i {
 }
 /*alinhamento-with*/
 .container {
-  max-width: 1600px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 8px;
 }
@@ -294,7 +294,7 @@ i {
   cursor: default;
 }
 
-@media screen and (min-width: 370px) and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .haircuts {
     flex-direction: column;
   }
@@ -365,7 +365,7 @@ i {
   opacity: 1;
 }
 
-@media screen and (min-width: 370px) and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .btn-whatsaap img {
     width: 54px;
   }
@@ -482,116 +482,15 @@ i {
 
 /* Estilos específicos para telas menores que 768px */
 @media screen and (min-width: 370px) and (max-width: 767px) {
+  .container-slider {
+    display: flex;
+    padding: 10px 40px;
+  }
   .slides {
     flex-wrap: nowrap; /* Impede que os slides quebrem para baixo */
-    width: 400%; /* Aumenta a largura para exibir todos os slides lado a lado */
   }
   .slide {
     width: 25%; /* Cada slide ocupa 25% da largura da tela */
-  }
-}
-/* Estilos para telas pequenas (até 767px) */
-@media screen and (max-width: 767px) {
-  .container {
-    padding: 0 16px;
-  }
-  .hero {
-    margin-top: 80px;
-    padding: 10px;
-  }
-  .hero h1 {
-    font-size: 28px;
-  }
-  .hero p {
-    font-size: 16px;
-  }
-  .about {
-    padding: 10px;
-    gap: 20px;
-  }
-  .abount-content {
-    padding: 20px;
-  }
-  .abount-content img {
-    width: 100%;
-  }
-  .about-description h2 {
-    font-size: 28px;
-  }
-  .services {
-    padding: 30px 10px;
-  }
-  .services-content h2 {
-    font-size: 28px;
-  }
-  .services-content p {
-    font-size: 16px;
-    max-width: 100%;
-  }
-  .haircuts {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-  .haircut img {
-    max-width: 100%;
-    height: auto;
-  }
-  .btn-whatsaap {
-    right: 10px;
-  }
-  .btn-whatsaap img {
-    max-width: 48px;
-  }
-}
-/* Estilos para telas médias (768px a 1023px) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .container {
-    padding: 0 24px;
-  }
-  .hero h1 {
-    font-size: 36px;
-  }
-  .about img {
-    max-width: 416px;
-  }
-  .services-content h2 {
-    font-size: 32px;
-  }
-  .services-content p {
-    font-size: 18px;
-  }
-  .haircuts {
-    padding: 0 32px 24px 32px;
-  }
-}
-/* Estilos para telas grandes (1024px ou mais) */
-@media screen and (min-width: 1024px) {
-  .container {
-    padding: 0 32px;
-  }
-  .hero h1 {
-    font-size: 46px;
-  }
-  .about img {
-    max-width: 753px;
-  }
-  .about-description h2 {
-    font-size: 38px;
-  }
-  .services-content h2 {
-    font-size: 38px;
-  }
-  .services-content p {
-    font-size: 20px;
-  }
-  .haircuts {
-    padding: 0 44px 34px 44px;
-  }
-  .haircut img {
-    max-width: 354px;
-  }
-  .btn-whatsaap img {
-    max-width: 78px;
   }
 }
 :root {
