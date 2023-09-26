@@ -8,6 +8,7 @@
 
 header {
   width: 100%;
+  padding: 0px 30px;
 }
 
 .header-content {
@@ -96,7 +97,7 @@ i {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assents//Design sem nome.png");
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assents/mesa-de-cafe-de-luxo-dentro-do-bar-barista-gerada-por-ia.jpg");
   left: 0;
   top: 0;
   width: 100%;
@@ -116,8 +117,9 @@ i {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 14px;
-  margin-top: 126px;
+  margin-top: 100px;
 }
 .hero h1 {
   text-align: center;
@@ -154,13 +156,11 @@ i {
   }
 }
 @media screen and (max-width: 768px) {
-  .hero {
-    min-height: 68vh;
-  }
   .hero h1 {
     font-size: 34px;
     padding: 0 14px;
     width: 100%;
+    text-align: center;
   }
   .hero p {
     font-size: 14px;
@@ -183,9 +183,13 @@ i {
 .abount-content {
   display: flex;
   padding: 34px 14px 64px 14px;
+  gap: 30px;
+  margin-top: 30px;
 }
 .abount-content img {
-  width: 753px;
+  width: 690px;
+  border-radius: 9px;
+  box-shadow: 0px -1px 17px -4px rgba(255, 255, 255, 0.45);
 }
 
 .abount-content div {
@@ -212,7 +216,9 @@ i {
     align-items: center;
   }
   img {
-    max-width: 416px;
+    max-width: 367px;
+    display: flex;
+    justify-content: center;
   }
   .about-description {
     text-align: center;
@@ -279,10 +285,11 @@ i {
 .haircut-inf {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 14px;
   background-color: var(--white-normal);
   z-index: 99;
+  text-align: center;
 }
 
 .haircut-inf button {
@@ -367,7 +374,8 @@ i {
 
 @media screen and (max-width: 768px) {
   .btn-whatsaap img {
-    width: 54px;
+    width: 66px;
+    margin-right: -12px;
   }
 }
 .slider {
@@ -403,83 +411,6 @@ i {
   transform: scale(1.1);
 }
 
-.manual-navigation {
-  position: relative;
-  width: 467px;
-  margin-top: -40px;
-  display: flex;
-  justify-content: center;
-}
-
-.manual-btn {
-  border: 2px solid var(--white-normal);
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.manual-btn:not(:last-child) {
-  margin-right: 20px;
-}
-
-.manual-btn:hover {
-  background-color: var(--blue-normal);
-  color: var(--blue-normal);
-}
-
-#radio1:checked ~ .fist {
-  margin-left: 0;
-}
-
-#radio2:checked ~ .fist {
-  margin-left: -25%;
-}
-
-#radio3:checked ~ .fist {
-  margin-left: -50%;
-}
-
-#radio4:checked ~ .fist {
-  margin-left: -75%;
-}
-
-.navigation-auto div {
-  border: 2px solid var(--blue-normal);
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.9s;
-}
-
-.navigation-auto {
-  position: absolute;
-  width: 467px;
-  margin-top: 360px;
-  display: flex;
-  justify-content: center;
-}
-
-.navigation-auto div:not(:last-child) {
-  margin-right: 20px;
-}
-
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-  background-color: var(--white-normal);
-}
-
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-  background-color: var(--white-normal);
-}
-
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-  background-color: var(--white-normal);
-}
-
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-  background-color: var(--white-normal);
-}
-
 /* Estilos específicos para telas menores que 768px */
 @media screen and (min-width: 370px) and (max-width: 767px) {
   .container-slider {
@@ -487,10 +418,117 @@ i {
     padding: 10px 40px;
   }
   .slides {
-    flex-wrap: nowrap; /* Impede que os slides quebrem para baixo */
+    flex-wrap: nowrap;
+    /* Impede que os slides quebrem para baixo */
   }
   .slide {
-    width: 25%; /* Cada slide ocupa 25% da largura da tela */
+    width: 25%;
+    /* Cada slide ocupa 25% da largura da tela */
+  }
+}
+.kids-titulo {
+  display: flex;
+  justify-content: center;
+  color: var(--blue-normal);
+}
+
+.kids-titulo h1 {
+  position: absolute;
+  margin-top: -20px;
+}
+
+.galery-photo {
+  display: grid;
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+.gallery {
+  justify-content: center;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+  width: 100%;
+  justify-content: center;
+}
+
+.photo {
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.photo img {
+  margin: 0 auto;
+  width: 467px;
+  height: 400px;
+  overflow: hidden;
+  transition: transform 0.4s;
+  box-shadow: 0px -1px 17px -4px rgba(146, 146, 146, 0.45);
+}
+
+.photo:hover {
+  transform: scale(1.01);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.photo:hover .overlay {
+  opacity: 1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  max-height: 90%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+.close-modal:hover {
+  color: #ccc;
+}
+
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  .gallery {
+    flex-direction: column;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 :root {

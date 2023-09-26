@@ -1,17 +1,16 @@
-let count = 1;
+const photos = document.querySelectorAll('.photo');
+const modal = document.querySelector('.modal');
+const modalImage = document.getElementById('modal-image');
+const closeModal = document.querySelector('.close-modal');
 
-document.getElementById("radio1").checked = true;
+photos.forEach(photo => {
+    photo.addEventListener('click', () => {
+        const imgSrc = photo.querySelector('img').src;
+        modalImage.src = imgSrc;
+        modal.style.display = 'block';
+    });
+});
 
-setInterval(function(){
-    nextImage();
-},5000)
-
-function nextImage(){
-    count ++;
-    if(count > 4){
-        count = 1
-
-    }
-
-    document.getElementById("radio"+ count).checked =true;
-}
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
