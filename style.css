@@ -257,7 +257,7 @@ i {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  padding: 0 44px 34px 44px;
+  padding: 44px 30px;
 }
 
 .haircut {
@@ -273,7 +273,7 @@ i {
   width: 100%;
   max-width: 354px;
   transition: transform(0, 25s);
-  height: 417px;
+  height: 300px;
 }
 
 .haircut img:hover {
@@ -306,7 +306,7 @@ i {
     flex-direction: column;
   }
   .haircut img {
-    max-width: 740px;
+    height: auto;
   }
   .footer p {
     text-align: center;
@@ -529,6 +529,16 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .modal-content {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 90%;
+    padding: 0 20px;
+  }
+  .modal-content img {
+    border-radius: 3px;
   }
 }
 :root {
